@@ -1,5 +1,6 @@
 import threading
 import keyboard
+
 import win32gui
 
 
@@ -22,13 +23,12 @@ def record_colors(hotkey='k'):
     positions = []
     print("In order to track color changes, please place the cursor over each button")
     for i in range(4):
-        print(f"Capturing Point {i+1}/4")
+        print(f"Capturing Point {i + 1}/4")
         print("Press Ctrl-K when mouse is placed")
         keyboard.wait(hotkey)
         positions.append(
             query_mouse_position()
         )
-
     return positions
 
 
