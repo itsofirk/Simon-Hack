@@ -13,9 +13,6 @@ def get_pixel_colour(i_x, i_y):
 
 
 if __name__ == '__main__':
-    all = 0
-    for i in range(100):
-        s = time()
-        get_pixel_colour(800, 100)
-        all += time() - s
-    print(all / 100)
+    print(get_pixel_colour(2623, 431))
+    keyboard.wait('k')
+    print(get_pixel_colour(2623, 431))
